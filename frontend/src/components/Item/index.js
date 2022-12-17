@@ -33,13 +33,14 @@ class Item extends React.Component {
   }
 
   render() {
-    let img = this.props.image;
-
+    
     if (!this.props.item) {
       return null;
     }
+    
+    let img = this.props.item.image;
 
-    if (typeof img === 'undefined') {
+    if (img === '' || typeof img === 'undefined') {
       img = placeholder;
     }
 
