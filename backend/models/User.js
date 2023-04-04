@@ -34,7 +34,8 @@ var UserSchema = new mongoose.Schema(
     hash: String,
     salt: String
   },
-  { timestamps: true }
+  { timestamps: true },
+  {isVerified: false}
 );
 
 UserSchema.plugin(uniqueValidator, { message: "is already taken." });
